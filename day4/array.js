@@ -53,3 +53,4 @@ console.log("ceil:",Math.ceil(56.89))
 console.log("power:",Math.pow(2,5))
 console.log("squareroot:",Math.sqrt(56.89))
 let b= " "
+let a= "ram is a good boy. he loves to play cricket.he works very hard in the playgorund so he can be the best player in the district.he is also very good iin acadimics, he scored i cgpa of 9.7. overall he is a good student.whatever you do do with your full potential and give your full efforts.";
