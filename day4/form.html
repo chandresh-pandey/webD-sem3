@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+    <script>
+        function validateForm() {
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let confirmPassword =
+                document.getElementById("confirmPassword").value;
+
+            // Name validation
+            if (name.trim() === "") {
+                alert("Please enter your name");
+                return false;
+            }
+
+            // Email validation
+            if (email.trim() === "") {
+                alert("Please enter your email");
+                return false;
+            }
+
+            // Password validation
+            if (password === "") {
+                alert("Please enter your password");
+                return false;
+            }
+
+            // Password length
+            if (password.length < 8) {
+                alert("Password must contain at least 8 characters");
+                return false;
+            }
+
+            // Confirm password
+            if (password !== confirmPassword) {
+                alert("Passwords do not match");
+                return false;
+            }
+
+            alert("Registration Successful!");
+
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Registration Form</h2>
+
+        <form onsubmit="return validateForm()">
+
+            <label>Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
+
+            <label>Email:</label>
+            <input type="email" id="email" placeholder="Enter your email">
+
+            <label>Password:</label>
+            <input type="password" id="password"
+                   placeholder="Enter password">
+
+            <label>Confirm Password:</label>
+            <input type="password" id="confirmPassword"
+                   placeholder="Confirm password">
+
+            <button type="submit">Register</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
